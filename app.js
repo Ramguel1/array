@@ -6,10 +6,10 @@ var uns =document.getElementById("uns");
 var borra =document.getElementById("borra");
 var index =document.getElementById("btnIndex");
 var splice =document.getElementById("splice");
-
+var nume =document.getElementById("nums");
 var miarray =new Array();
 
-
+var r=0;
 splice.onclick=async()=>{
   const {value:pos} =await Swal.fire({
     title: "SPlICE",
@@ -74,6 +74,7 @@ btnAdd.onclick=() =>{
     
   }
   items.innerHTML=nums;
+      nume.innerHTML=r++ +1;
 }
 
 
@@ -87,6 +88,7 @@ reset.onclick=() =>{
     
   }
   items.innerHTML=nums;
+      nume.innerHTML=r-- -1;
 }
 
 
@@ -100,6 +102,7 @@ uns.onclick=() =>{
     
   }
   items.innerHTML=nums;
+      nume.innerHTML=r++ +1;
 }
 
 borra.onclick=() =>{
@@ -112,6 +115,7 @@ borra.onclick=() =>{
     
   }
   items.innerHTML=nums;
+      nume.innerHTML=r-- -1;
 }
 
 
@@ -122,4 +126,5 @@ const imprimirArray=()=>{
         x+="<h3>"+miarray[i]+"</h3>";
     }
     items.innerHTML=x;
+    nume.innerHTML=r++ +1|| r-- -1;
 }
